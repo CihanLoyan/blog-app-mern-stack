@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    list-style-type: none;
+}
+.top {
+    width: 100%;
+    height: 100px;
+    background-color: #C2DED1;
+    position: sticky; /* scroll yaptıkça sabit kalsın */
+    top: 0;
+    display: flex; /* child elementler yan yana sıralansın */
+    align-items: center; /* child elementler dikeyde ortaya hizalansın */
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.topLeft, .topRight {
+    flex: 3; /* 3 birim */
+    display: flex; 
+    align-items: center; /* child elemetleri dikeyde ortaya hizalar */
+    justify-content: center; /* child elementleri yatayda ortada konumlandırır */
+}
+
+.topCenter {
+    flex: 6; /* 6 birim */
+}
+
+.topList {
+    display: flex; /* child elementleri yan yana sıralar */
+    justify-content: center; /* yatayda ortada konumlandırdı */
+}
+
+.topListItem {
+    margin-right: 15px; /* elementlerin arasına 15px mesafe koyduk */
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.topSearchIcon {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.topIcon {
+    margin-right: 5px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.topImg {
+    width: 50px;
+    height: 50px;
+    object-fit: cover; /* istenilen ölçülerde resmi bozmadan sığdırır */
+    border-radius: 50%; /* tam daire haline getirir */
+    margin-right: 10px;
+}
