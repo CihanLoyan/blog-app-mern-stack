@@ -1,0 +1,24 @@
+.header {
+    margin-top: 50px;
+}
+
+.headerTitles {
+    display: flex;
+    flex-direction: column; /* Dikey hizaladım */
+    align-items: center; /* Elementler dikey hizalı olduğu için, center ile satırda ortalamış oldum. */
+    font-family: 'Righteous', cursive;
+    color: #444;
+}
+
+.headerTitleBig {
+    position: absolute;
+    top: 22%;
+    font-size: 50px;
+}
+
+.headerImage {
+    width: 100%;
+    height: 550px;
+    margin-top: 41px;
+    object-fit: cover;
+}
