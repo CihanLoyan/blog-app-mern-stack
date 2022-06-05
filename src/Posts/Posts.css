@@ -1,3 +1,6 @@
 .posts {
     flex: 9;
+    display: flex;
+    flex-wrap: wrap; /* Yeni postlar eklendiğinde kendi flex alanını aşmayıp aşağıya doğru devam etmesi için */
+    justify-content: center;
 }

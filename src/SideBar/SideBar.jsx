@@ -8,7 +8,7 @@ export default function Sidebar() {
         <span className="aboutMe sideBarTitle">About Me</span>
         <img 
           className='sideBarTitleImg'
-          src={ data.image[2]} 
+          src={ data.images[0]} 
           alt="" 
         />
         <p>

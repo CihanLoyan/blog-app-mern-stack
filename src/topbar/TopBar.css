@@ -13,6 +13,8 @@
     display: flex; /* child elementler yan yana sıralansın */
     align-items: center; /* child elementler dikeyde ortaya hizalansın */
     font-family: 'Josefin Sans', sans-serif;
+    box-shadow: 0 2px 6px 0 rgba(38, 47, 40, 0.8);
+    z-index: 999;
 }
 
 .topLeft, .topRight {

@@ -8,7 +8,7 @@ export default function Header() {
             {/*<span className='headerTitleSmall'>Küçük Başlık</span>*/}
             <span className='headerTitleBig'>Büyük Başlık</span>
         </div>
-        <img className='headerImage' src={data.image[1]} alt="" />
+        <img className='headerImage' src={data.images[1]} alt="" />
     </div>
   )
 }

@@ -1,5 +1,6 @@
 .sidebar {
     flex: 3;
+    height: 600px;
     margin: 20px;
     padding-bottom: 30px;
     background-color: #fdfbfb;
@@ -9,6 +10,10 @@
     align-items: center;  
     border-bottom: 3px solid #403c3c;
     border-top: 3px solid #403c3c;
+}
+
+.sidebar:hover {
+    background-color: #f6fffd;
 }
 
 .sideBarTitle {
@@ -59,4 +64,5 @@
 .sideBarIcon {
     font-size: 24px;
     margin-right: 10px;
+    cursor: pointer;
 }

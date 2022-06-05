@@ -1,4 +1,7 @@
 export const data = 
     {
-        image: ["oldmap.jpg", "oldmap2.jpg", "oldmap3.jpg"]
+        images: [
+            "oldmap3.jpg",
+            "mountain2.jpg",
+        ]
     }
