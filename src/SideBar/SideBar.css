@@ -1,0 +1,62 @@
+.sidebar {
+    flex: 3;
+    margin: 20px;
+    padding-bottom: 30px;
+    background-color: #fdfbfb;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    border-bottom: 3px solid #403c3c;
+    border-top: 3px solid #403c3c;
+}
+
+.sideBarTitle {
+    margin: 10px;
+    width: 100%;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #222;
+    line-height: 30px;
+    text-align: center;
+    border-bottom: 1px solid #403c3c;
+}
+
+.aboutMe {
+    width: 30%;
+}
+
+.sideBarTitleImg {
+   width: 100%; /* SideBar alanının tüm genişliğine yayılsın */
+   margin-bottom: 15px;
+}
+
+.sideBarItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sideBarItem p {
+    padding: 20px;
+}
+
+.sideBarList {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.sideBarListItem {
+    display: inline-block;
+    width: 50%;
+}
+
+.sideBarSocial {
+    margin-top: 10px;
+}
+
+.sideBarIcon {
+    font-size: 24px;
+    margin-right: 10px;
+}
