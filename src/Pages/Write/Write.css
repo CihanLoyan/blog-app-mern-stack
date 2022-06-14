@@ -1,0 +1,98 @@
+.write {
+    padding: 50px;
+    display: block;
+}
+
+.writeForm {
+    position: relative;
+}
+
+.writeImage {
+    width: 60%;
+    height: 350px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.writeImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.writeFormGroup {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    align-items: flex-start;
+}
+
+.writeInput {
+    font-size: 30px;
+    border: none;
+    padding: 20px 0;
+    width: 80%;
+}
+
+.writeInput:focus {
+    outline: none;
+}
+
+.writeText {
+    font-size: 20px ;
+}
+
+.writeIcon {
+    margin-bottom: 20px;
+    width: 30px;
+    height: 30px;
+    font-size: 40px;    
+    color: rgb(15, 146, 0);
+    cursor: pointer;
+}
+
+.publishButton {
+    position: absolute;
+    top: 0;
+    right: 70px;
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    background-color: #009578;
+    cursor: pointer;
+}
+
+.publishText {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+.publishIcon {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: rgb(0, 0, 0, 0.08);
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.fa-paper-plane {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    color: white;
+    padding-bottom: 5px;
+}

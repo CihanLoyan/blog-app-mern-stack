@@ -5,12 +5,15 @@
     border-radius: 35px;
     background-color: #f5f5f5;
     box-shadow: 15px 15px 5px 0px #575757; 
+    cursor: pointer;
     /* 1. parametre x ekseninde, 2.'si y ekseninde gölge verir.  
        3. parametre gölgeye blur(yumuşaklık) verir ve 4. parametre de her tarafa gölge verir.
     */
+    transition: 500ms transform;
 }
 .post:hover {
     background-color: #f6fffd;
+    transform: translateY(0.5%)
 }
 
 .postImage {

@@ -8,6 +8,12 @@ export default function Posts() {
       <Post />
       <Post />
       <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
     </div>
   )
 }

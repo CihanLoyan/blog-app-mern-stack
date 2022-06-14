@@ -1,5 +1,5 @@
 import './Post.css'
-import { data } from '../data/data'
+import { data } from '../../data/data'
 
 export default function Post() {
   return (

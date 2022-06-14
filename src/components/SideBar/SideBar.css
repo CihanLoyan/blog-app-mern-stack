@@ -1,13 +1,14 @@
 .sidebar {
     flex: 3;
-    height: 600px;
+    height: 570px;
     margin: 20px;
     padding-bottom: 30px;
-    background-color: #fdfbfb;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;  
+    position: sticky;   /* scroll ettikçe yukarıdan 105px sabit kalsın */
+    top: 110px;
     border-bottom: 3px solid #403c3c;
     border-top: 3px solid #403c3c;
 }
@@ -33,7 +34,10 @@
 }
 
 .sideBarTitleImg {
-   width: 100%; /* SideBar alanının tüm genişliğine yayılsın */
+   width: 70%;  /* SideBar alanının tüm genişliğine yayılsın */
+   height: 220px;
+   object-fit: cover;
+   border-radius: 50%; 
    margin-bottom: 15px;
 }
 
@@ -44,7 +48,9 @@
 }
 
 .sideBarItem p {
-    padding: 20px;
+    padding: 10px 20px 0px 20px;
+    padding-bottom: 0;
+    text-align: justify;
 }
 
 .sideBarList {

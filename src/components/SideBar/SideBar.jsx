@@ -1,5 +1,5 @@
 import './SideBar.css'
-import { data } from '../data/data'
+import { data } from '../../data/data'
 
 export default function Sidebar() {
   return (
@@ -8,7 +8,7 @@ export default function Sidebar() {
         <span className="aboutMe sideBarTitle">About Me</span>
         <img 
           className='sideBarTitleImg'
-          src={ data.images[0]} 
+          src={ data.images[2]} 
           alt="" 
         />
         <p>
