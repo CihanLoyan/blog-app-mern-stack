@@ -31,8 +31,13 @@
 .writeInput {
     font-size: 30px;
     border: none;
-    padding: 20px 0;
+    padding: 10px 0;
     width: 80%;
+    border-bottom: 1px solid #cdcdcd;
+}
+
+.writeTitle {
+    margin-bottom: 20px;
 }
 
 .writeInput:focus {

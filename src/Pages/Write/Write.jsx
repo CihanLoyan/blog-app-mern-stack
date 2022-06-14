@@ -16,7 +16,7 @@ export default function Write() {
                 <input type="text" placeholder='Başlık' className='writeInput writeTitle'/>
             </div>
             <div className="writeFormGroup">
-                <textarea className='writeInput writeText' cols="30" rows="10" placeholder='İçeriği giriniz...' type="text"></textarea>
+                <textarea className='writeInput writeText' cols="30" rows="1" placeholder='İçeriği giriniz...' type="text"></textarea>
             </div>
             <button className='publishButton' type='submit'>
                 <span className='publishText'>Yayınla</span>

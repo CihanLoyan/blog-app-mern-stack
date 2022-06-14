@@ -13,8 +13,8 @@ function App() {
     <>
       <TopBar />
       <Header />
-      {/*
       <Home />
+      {/*
       <Single />
       <Write />
       <Settings />
