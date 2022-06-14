@@ -1,0 +1,90 @@
+.settings {
+    display: flex;
+}
+
+.settingsWrapper {
+    flex: 9;
+    padding: 30px;
+}
+
+.settingsTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.settingsUpdateTitle {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.settingsDeleteTitle {
+    font-size: 15px;
+}
+
+.settingsForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.settingsProfile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    position: relative;
+}
+
+.settingsProfilePicture {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 25px;
+}
+
+.settingsProfilePicture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    opacity: .8;
+}
+
+.settingsProfilePictureIcon {
+    color: white;
+    position: absolute;
+    left: 517px;
+    top: 80px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.settingsProfilePictureIcon:hover {
+    color: #c2ded1;
+}
+
+.settingsProfile ~ input {  /* Belirtilen class'tan sonra gelen tüm input'ları seçer. */
+    padding: 20px 20px 10px 0;
+    border: none;
+    border-bottom: 1px solid rgb(178, 178, 178);
+    margin-bottom: 15px;
+    outline: none;
+    font-family: 'Varela Round', sans-serif;
+}
+.settingsButton {
+    width: 200px;
+    height: 45px;
+    margin: 20px auto;
+    background-color: #e3e3e3;
+    color: #369d6d;
+    border-color: #c2ded1;
+    border-radius: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.settingsButton:hover {
+    background-color: #369d6d;
+    color: white;
+}

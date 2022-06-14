@@ -1,0 +1,69 @@
+.register {
+    width: 20%; /* Genişliği sayfa genişliğinin yarısı kadar olsun. */
+    display: flex;
+    flex-direction: column; /* Elementleri alt alta sıraladım */
+    margin: 50px auto;  /* Sayfa içinde ortalamak için kullandım. width belirttiğim için sadece top ve bottom 50px olarak ayarlanacak.*/
+}
+
+.registerTitle {
+    display: flex;
+    justify-content: center;
+    font-family: 'Varela', sans-serif;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.registerForm {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.registerInput {
+    padding: 20px 20px 10px 5px;
+    border: none;
+    border-bottom: 1px solid rgb(178, 178, 178);
+    margin-bottom: 15px;
+    outline: none;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.registerForm input:nth-child(2) {
+    margin-bottom: 30px;
+}
+
+.registerButton {
+    width: 100%;
+    height: 45px;
+    background-color: #e3e3e3;
+    color: #369d6d;
+    border-color: #c2ded1;
+    border-radius: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.registerLogin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.registerLogin span {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 15px;
+}
+
+.registerLoginButton {
+    width: 45%;
+    height: 40px;
+    background-color: #e3e3e3;
+    color: #369d6d;
+    border-color: #c2ded1;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: 'Josefin Sans', sans-serif;
+}
