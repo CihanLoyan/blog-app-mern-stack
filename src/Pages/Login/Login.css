@@ -57,14 +57,21 @@
     font-family: 'Josefin Sans', sans-serif;
 }
 
+.loginRegisterLink {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    height: 40px;   
+    text-decoration: none;
+}
+
 .loginRegisterButton {
-    width: 45%;
-    height: 40px;
+    width: 100%;
     background-color: #e3e3e3;
     color: #369d6d;
     border-color: #c2ded1;
     border-radius: 15px;
     cursor: pointer;
-    font-size: 15px;
     font-family: 'Josefin Sans', sans-serif;
+    font-size: 15px;
 }

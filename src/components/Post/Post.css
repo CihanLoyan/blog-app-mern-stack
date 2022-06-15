@@ -52,11 +52,17 @@
 }
 
 .postDescription {
-    padding: 15px 15px 0 15px;
+    text-align: justify;
+    padding: 15px 30px 0 30px;
     margin-bottom: 15px;
     overflow: hidden;  /* Taşan kısımları gizle */
     text-overflow: ellipsis; /* Taşan kısımları temsil etmek için '...' koyar  */
     display: -webkit-box;  
     -webkit-box-orient: vertical; /* satırları dikey olarak sırala */
     -webkit-line-clamp: 3;  /* Görünecek kısmı 3 satırla sınırladım */
+}
+
+.postLink {
+    text-decoration: none;
+    color: black;
 }

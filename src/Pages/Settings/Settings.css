@@ -48,10 +48,6 @@
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
-    opacity: 1;
-}
-
-.settingsProfilePicture img:hover {
     opacity: .5;
 }
 
@@ -65,7 +61,7 @@
 }
 
 .settingsProfilePictureIcon:hover {
-    color: #c2ded1;
+    color: black;
 }
 
 .settingsProfile ~ input {  /* Belirtilen class'tan sonra gelen tüm input'ları seçer. */

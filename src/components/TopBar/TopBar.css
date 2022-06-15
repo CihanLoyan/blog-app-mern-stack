@@ -34,10 +34,15 @@
 }
 
 .topListItem {
-    margin-right: 15px; /* elementlerin arasına 15px mesafe koyduk */
     font-size: 20px;
     font-weight: 400;
+    margin-right: 30px; /* elementlerin arasına 15px mesafe koyduk */
     cursor: pointer;
+}
+
+.topListItem a {
+    text-decoration: none;
+    color: black;
 }
 
 .topSearchIcon {
@@ -57,4 +62,13 @@
     object-fit: cover; /* istenilen ölçülerde resmi bozmadan sığdırır */
     border-radius: 50%; /* tam daire haline getirir */
     margin-right: 10px;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
+    margin-right: 20px;
+    cursor: pointer;
 }

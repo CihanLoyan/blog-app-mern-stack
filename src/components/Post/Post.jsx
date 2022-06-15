@@ -1,9 +1,11 @@
+import { Link } from 'react-router-dom'
 import './Post.css'
 import { data } from '../../data/data'
 
 export default function Post() {
   return (
     <div className='post'>
+      <Link className='postLink' to="/post/133654">
         <img className='postImage' src={data.images[1]} alt="" />
         <div className="postInfo">
             <div className="postCategories">
@@ -14,8 +16,9 @@ export default function Post() {
             </div>
             <hr />
             <span className="postDate">1 saat önce</span>
-            <p className='postDescription'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit fugit exercitationem illo obcaecati harum nihil sequi enim pariatur libero voluptatibus aperiam in quod voluptatem doloremque dolore vero iure cum, omnis officiis inventore. Omnis aut ut voluptatibus, soluta unde eius at. Quibusdam, odit deserunt unde sint quia mollitia possimus provident quam porro neque error voluptate recusandae laboriosam doloribus pariatur itaque natus cum dolore iure reprehenderit officiis dolores illo. Quam odit suscipit ipsa quis totam eum perferendis dolorum unde doloribus, obcaecati earum hic assumenda a error, magnam est. Deserunt, quam dolor aperiam, dolorum rem nam similique impedit rerum adipisci consequuntur officia repellat.</p>
+            <p className='postDescription'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic suscipit cumque sint tempore tenetur soluta quia eligendi cum unde earum omnis non vitae qui dolorem placeat veniam porro deleniti quam ducimus, quas dolor facilis repellat. Mollitia quod illum eaque facere labore aliquam ipsum aspernatur ab officia, officiis nostrum unde libero. Aliquam alias eaque odit distinctio officiis nesciunt recusandae molestias enim, quis totam pariatur quam aut libero ipsam incidunt, assumenda veniam fugit sed. Explicabo, magni vel. Optio similique expedita neque modi autem quaerat excepturi laudantium dicta impedit? Cum culpa illo tempore animi, eos pariatur alias cupiditate quis ad, explicabo perferendis architecto!</p>
         </div>
+      </Link>
     </div>
   )
 }
