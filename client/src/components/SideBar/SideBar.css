@@ -72,3 +72,7 @@
     margin-right: 10px;
     cursor: pointer;
 }
+
+.sideBarListLink {
+    text-decoration: none;
+}

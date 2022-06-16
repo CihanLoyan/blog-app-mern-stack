@@ -63,3 +63,8 @@
     letter-spacing: 0.06rem;
     font-family: 'Roboto Condensed', sans-serif;
 }
+
+.singlePostAuthorLink {
+    text-decoration: none;
+    color: #5c5b5b;
+}

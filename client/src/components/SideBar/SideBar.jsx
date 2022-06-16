@@ -1,14 +1,30 @@
 import './SideBar.css'
 import { data } from '../../data/data'
+import { useState } from 'react'
+import { useEffect } from 'react'
+import { useLocation } from 'react-router'
+import { Link } from 'react-router-dom';
+import api from '../../axiosCreate'
 
 export default function Sidebar() {
+
+  const [cats, setCats] = useState([]); /* Categories bir dizi olduğu için başlangıç değeri olarak dizi verdim. */
+
+  useEffect(() => {
+    const getCats = async () => {
+      const res = await api.get("/categories")
+      setCats(res.data)
+    }
+    getCats();
+  }, [])
+
   return (
     <div className='sidebar'>
       <div className="sideBarItem">
-        <span className="aboutMe sideBarTitle">About Me</span>
+        <span className="aboutMe sideBarTitle">Hakkımda</span>
         <img 
           className='sideBarTitleImg'
-          src={ data.images[2]} 
+          src={data.images[2]} 
           alt="" 
         />
         <p>
@@ -19,12 +35,13 @@ export default function Sidebar() {
         </p>
       </div>
       <div className="sideBarItem">
-        <span className='sideBarTitle'>Categories</span>
+        <span className='sideBarTitle'>Kategoriler</span>
         <ul className="sideBarList">
-          <li className="sideBarListItem">Din</li>
-          <li className="sideBarListItem">Tarih</li>
-          <li className="sideBarListItem">Siyaset</li>
-          <li className="sideBarListItem">Teknoloji</li>
+          {cats.map(c => (
+            <Link to={`/?cat=${c.name}`} className="sideBarListLink" >
+              <li className="sideBarListItem">{c.name}</li>
+            </Link>
+          ))}
         </ul>
       </div>
       <div className="sideBarItem">

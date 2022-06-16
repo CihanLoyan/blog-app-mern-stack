@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Pages
 import Home from "./Pages/Home/Home";
@@ -9,9 +9,7 @@ import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
 
 // Components
-import Header from "./components/Header/Header";
 import TopBar from "./components/TopBar/TopBar";
-import SinglePost from "./components/SinglePost/SinglePost";
 
 
 function App() {
