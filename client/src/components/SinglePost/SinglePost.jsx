@@ -5,7 +5,7 @@ export default function SinglePost() {
   return (
     <div className='singlePost'>
       <div className="singlePostWrapper">
-        <img src={ data.images[1]} className='singlePostImage' alt="" />
+        <img src={data.images[1]} className='singlePostImage' alt="" />
         <div className='singlePostInfo'>
           <div className="singlePostAuthDate">
             <span className='singlePostAuthor'>Cihan Loyan</span>
