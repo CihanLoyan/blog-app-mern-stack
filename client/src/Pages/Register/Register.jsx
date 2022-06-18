@@ -56,9 +56,9 @@ export default function Register() {
           <button className="registerLoginButton">Giriş Yap</button>
         </Link>
       </div>
-      {error && (
+      {error && ( /* Yukarıka hata yakalanırsa catch içindeki setError True olur ve bu durumda bu satır çalışır. */
         <span style={{ color: "red", marginTop: "10px" }}>
-          Something went wrong!
+          Bir hata oluştu!
         </span>
       )}
     </div>
