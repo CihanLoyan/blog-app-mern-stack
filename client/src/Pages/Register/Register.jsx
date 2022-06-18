@@ -28,7 +28,7 @@ export default function Register() {
   return (
     <div className='register'>
         <h1 className='registerTitle'>Üye Ol</h1>
-        <form className="registerForm" onSubmit={handleSubmit} method='post'>
+        <form className="registerForm" onSubmit={handleSubmit} >  
             <input type="text" className='registerInput' placeholder='Kullanıcı Adı' onChange={e => setUsername(e.target.value)} />
             <input type="email" className='registerInput' placeholder='Email adresinizi giriniz' onChange={e => setEmail(e.target.value)} />
             <input type="password" className='registerInput' placeholder='Şifre' onChange={e => setPassword(e.target.value)} />
