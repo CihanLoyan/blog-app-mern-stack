@@ -47,6 +47,11 @@
     font-family: 'Josefin Sans', sans-serif;
 }
 
+.loginButton:disabled { 
+    cursor: not-allowed;
+    
+}
+
 .loginRegister {
     display: flex;
     align-items: center;
