@@ -11,6 +11,13 @@
     */
     transition: 500ms transform;
 }
+
+@media (max-width: 420px) {
+    .post {
+        margin: 10px 40px 40px 40px;    
+    }
+}
+
 .post:hover {
     background-color: #f6fffd;
     transform: translateY(0.5%)
