@@ -1,6 +1,6 @@
 .sidebar {
-    flex: 3;
-    height: 570px;
+    flex: 2.5;
+    height: 585px;
     margin: 20px;
     padding-bottom: 30px;
     border-radius: 20px;
@@ -8,9 +8,15 @@
     flex-direction: column;
     align-items: center;  
     position: sticky;   /* scroll ettikçe yukarıdan 105px sabit kalsın */
-    top: 110px;
+    top: 95px;
     border-bottom: 3px solid #403c3c;
     border-top: 3px solid #403c3c;
+}
+
+@media (max-width: 820px) {
+    .sidebar {
+        display: none;
+    }
 }
 
 .sidebar:hover {

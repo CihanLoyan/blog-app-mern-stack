@@ -80,3 +80,9 @@
     font-family: 'Josefin Sans', sans-serif;
     font-size: 15px;
 }
+
+@media (max-width: 821px) { 
+   .login {
+    width: 40%; /* Genişliği sayfa genişliğinin yarısı kadar olsun. */
+   }
+}

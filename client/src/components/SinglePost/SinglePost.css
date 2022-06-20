@@ -6,6 +6,26 @@
     padding: 50px 100px;
 }
 
+@media (max-width: 420px) {
+    .singlePostWrapper {
+        padding: 50px 20px;
+    }
+    
+    .singlePostWrapper .singlePostImage {
+        height: 200px;
+    }
+    .singlePostInfo .singlePostAuthDate {
+        font-size: 10px;
+    }
+    .singlePostInfo .singlePostTitle {
+        font-size: 20px;
+        padding-top: 0;
+    }
+    .singlePostInfo .singlePostEdit i {
+        font-size: 1rem;
+    }
+}
+
 .singlePostImage {
     width: 100%;
     height: 350px;

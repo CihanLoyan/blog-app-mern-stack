@@ -6,7 +6,7 @@
 }
 .top {
     width: 100%;
-    height: 105px;
+    height: 90px;
     background-color: #C2DED1;
     position: sticky; /* scroll yaptıkça sabit kalsın */
     top: 0;
@@ -17,11 +17,74 @@
     z-index: 999;
 }
 
-.topLeft, .topRight {
+@media (max-width: 821px) {
+    .top {
+        height: 80px;
+    }
+    .topListItem a {
+        font-size: 15px;
+    }
+    .topListItem:last-child {
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        top: 2px;
+    } 
+    .top .topRight .link { 
+        font-size: 15px;
+        position: relative;
+        top: 2px;
+    } 
+}
+
+@media (max-width: 420px) {
+    .top {
+        width: 100vw;
+        height: 50px;
+    }
+    .top .topCenter {
+        flex: 8;
+        margin-left: 10px;
+    }
+
+    .top .topRight {
+        flex: 1.5;
+    }
+    .top .topRight .link { 
+        font-size: 13px;
+    }
+    .top .topLeft {
+        display: none;
+    }
+    .top .topCenter ul li {
+        margin-right: 10px;
+    }
+    .topRight i {
+        display: none;
+    }
+    .topRight ul li img {
+        width: 30px;
+        height: 30px;
+        object-fit: cover; /* istenilen ölçülerde resmi bozmadan sığdırır */
+        border-radius: 50%; /* tam daire haline getirir */
+        margin-right: 0px;
+        display: flex;
+    }
+}
+
+.topLeft {
     flex: 3; /* 3 birim */
     display: flex; 
     align-items: center; /* child elemetleri dikeyde ortaya hizalar */
     justify-content: center; /* child elementleri yatayda ortada konumlandırır */
+}
+
+.topRight {
+    flex: 3; /* 3 birim */
+    display: flex; 
+    align-items: center; /* child elemetleri dikeyde ortaya hizalar */
+    justify-content: center; /* child elementleri yatayda ortada konumlandırır */ 
 }
 
 .topCenter {

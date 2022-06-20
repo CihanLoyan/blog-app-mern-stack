@@ -74,3 +74,9 @@
     font-size: 15px;
     font-family: 'Josefin Sans', sans-serif;
 }
+
+@media (max-width: 821px) { 
+    .register {
+        width: 40%; /* Genişliği sayfa genişliğinin yarısı kadar olsun. */
+    }
+ }
