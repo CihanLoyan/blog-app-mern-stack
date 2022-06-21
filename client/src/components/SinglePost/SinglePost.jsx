@@ -12,6 +12,9 @@ export default function SinglePost() {
 
   const [post, setPost] = useState({})
   const { user } = useContext(Context)
+  const [title, setTitle] = useState("")
+  const [desc, setDesc] = useState("")
+  const [updateMode, setUpdateMode] = useState(false)
 
   useEffect(() => {
     const getPost = async () => {
@@ -37,7 +40,7 @@ export default function SinglePost() {
           <img src={post.photo} className='singlePostImage' alt="" />
         }
         <div className='singlePostInfo'>
-          <div className="singlePostAuthDate">
+          <div className="singlePostAuthDate" id='auth-date'>
             <span className='singlePostAuthor'>Yazar: 
             <Link to={`/?user=${post.userName}`} className="singlePostAuthorLink">
               <b>{` ${post.userName}`}</b>
@@ -45,17 +48,28 @@ export default function SinglePost() {
             </span>
             <span className='singlePostDate'>{new Date(post.createdAt).toDateString()}</span>
           </div>
-          <h1 className="singlePostTitle">{post.title}</h1>
-          {post.userName === user?.userName && (
-          <div className="singlePostEdit">
-            <i className="singlePostIcon fa-solid fa-pen-to-square"></i>           
-            <i className="singlePostIcon fas fa-eraser" onClick={handleDelete}></i>
-          </div>
-          )}
+          {
+            updateMode ? <input type="text" value={post.title} className="singlePostTitleUpdate" /> : (
+              <>
+                <h1 className="singlePostTitle">{post.title}</h1>
+                <div className="singlePostEdit">
+                {post.userName === user?.userName && (
+                  <>
+                    <i className="singlePostIcon fa-solid fa-pen-to-square" onClick={() => setUpdateMode(true)}></i>           
+                    <i className="singlePostIcon fas fa-eraser" onClick={handleDelete}></i>
+                  </>
+                )}
+                </div>
+              </>
+            )
+          }
         </div>
-        <p className="singlePostContent">   
-          {post.desc}
-        </p>
+        {
+          updateMode ? <textarea value={post.desc} className="singlePostContentUpdate" /> : (
+            <p className="singlePostContent">   
+            </p>
+          )
+        }
       </div>
     </div>
   )

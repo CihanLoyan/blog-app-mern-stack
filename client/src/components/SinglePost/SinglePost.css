@@ -55,6 +55,25 @@
     padding-top: 30px;
 }
 
+.singlePostTitleUpdate {
+    font-size: 30px;
+    border: none;
+    padding: 10px 0;
+    border-bottom: 1px solid #cdcdcd;
+    outline: none;
+    margin-top: 20px;
+}
+
+.singlePostContentUpdate {
+    font-size: 30px;
+    border: none;
+    border-bottom: 1px solid #cdcdcd;
+    outline: none;
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+}
+
 .singlePostEdit {
     flex: 3;
     text-align: end;
