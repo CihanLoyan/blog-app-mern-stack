@@ -20,6 +20,8 @@ export default function SinglePost() {
     const getPost = async () => {
       const res = await api.get("/posts/" + path) /* Yukarıka yakaladığım id'yi belirttiğim url içinde api'ye get isteği atıp res değişkeni içine attım.  */
       setPost(res.data) /* res değişkeni içindeki data'yı setPost'a yolladım. setPost da post'u günceller. Artık aşağıda post ile istediğim id'nin data'larını çağırabilirim. */
+      setTitle(res.data.title)
+      setDesc(res.data.desc)
     }
     getPost();
   }, [path]);
@@ -32,6 +34,17 @@ export default function SinglePost() {
       window.location.replace("/");
     } catch (err) {}
   };
+
+  const handleUpdate = async () => {
+    try {
+      await api.put(`/posts/${post._id}`, {
+        userName: user.userName, 
+        title, 
+        desc,
+      });
+      setUpdateMode(false);
+    } catch (err) {}
+  }
 
   return (
     <div className='singlePost'>
@@ -49,9 +62,11 @@ export default function SinglePost() {
             <span className='singlePostDate'>{new Date(post.createdAt).toDateString()}</span>
           </div>
           {
-            updateMode ? <input type="text" value={post.title} className="singlePostTitleUpdate" /> : (
+            updateMode ? (
+              <input type="text" value={title} className="singlePostTitleUpdate" onChange={(e) => setTitle(e.target.value)} />
+              ) : (
               <>
-                <h1 className="singlePostTitle">{post.title}</h1>
+                <h1 className="singlePostTitle">{title}</h1>
                 <div className="singlePostEdit">
                 {post.userName === user?.userName && (
                   <>
@@ -65,9 +80,21 @@ export default function SinglePost() {
           }
         </div>
         {
-          updateMode ? <textarea value={post.desc} className="singlePostContentUpdate" /> : (
-            <p className="singlePostContent">   
-            </p>
+          updateMode ? (
+              <textarea value={desc} className="singlePostContentUpdate" onChange={(e) => setDesc(e.target.value)} />
+          ) : (
+              <p className="singlePostContent">{desc}</p>
+          )
+        }
+
+        {
+          updateMode && (
+            <button className='singlePostUpdateButton' type='submit' onClick={handleUpdate}>
+              <span className='singlePostUpdateButtonText'>Yayınla</span>
+              <span className='singlePostUpdateButtonIcon'>
+                  <i class='fa fa-paper-plane'></i>
+              </span>
+            </button>
           )
         }
       </div>
