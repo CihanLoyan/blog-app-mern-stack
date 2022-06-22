@@ -1,5 +1,4 @@
 import './Write.css'
-import { data } from '../../data/data'
 import { useContext, useState } from 'react'
 import { Context } from '../../Context/Context'
 import api from '../../axiosCreate'
@@ -32,7 +31,7 @@ export default function Write() {
             const res = await api.post("/posts", newPost);
             window.location.replace("/post/" + res.data._id);
           } catch (err) {}
-    }
+    };
 
   return (
     <div className='write'>

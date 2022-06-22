@@ -46,6 +46,8 @@
     .top .topCenter {
         flex: 8;
         margin-left: 10px;
+        display: flex;
+        justify-content: flex-start;
     }
 
     .top .topRight {
@@ -60,15 +62,21 @@
     .top .topCenter ul li {
         margin-right: 10px;
     }
+
+    .top .topCenter ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
     .topRight i {
         display: none;
     }
     .topRight ul li img {
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
         object-fit: cover; /* istenilen ölçülerde resmi bozmadan sığdırır */
         border-radius: 50%; /* tam daire haline getirir */
-        margin-right: 0px;
+        margin-right: 10px;
         display: flex;
     }
 }
@@ -91,6 +99,23 @@
     flex: 6; /* 6 birim */
 }
 
+.topCenter ul {
+    box-sizing: border-box;
+}
+
+.topCenter ul li {
+    padding: 5px 10px;
+    box-sizing: border-box;
+}
+
+.topCenter ul li:hover {
+    border: 1px solid #c2ded1;
+    border-radius: 10px;
+    background: #f4f4f4;
+    box-shadow: 0 2px #333;
+    padding: 5px 10px;  
+}
+
 .topList {
     display: flex; /* child elementleri yan yana sıralar */
     justify-content: center; /* yatayda ortada konumlandırdı */
@@ -101,6 +126,11 @@
     font-weight: 400;
     margin-right: 30px; /* elementlerin arasına 15px mesafe koyduk */
     cursor: pointer;
+}
+
+.logOut a:hover {
+    color: rgb(231, 0, 0);
+    transition: .2s ease-in-out;
 }
 
 .topListItem a {
@@ -120,11 +150,15 @@
 }
 
 .topImg {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     object-fit: cover; /* istenilen ölçülerde resmi bozmadan sığdırır */
     border-radius: 50%; /* tam daire haline getirir */
     margin-right: 10px;
+    display: flex;
+    box-shadow: 1px 2px #333;
+    border-color: #333;
+    cursor: pointer;
 }
 
 .link {

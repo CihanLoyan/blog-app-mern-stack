@@ -16,6 +16,8 @@ export default function SinglePost() {
   const [desc, setDesc] = useState("")
   const [updateMode, setUpdateMode] = useState(false)
 
+  const PF = "http://localhost:5000/images/";
+
   useEffect(() => {
     const getPost = async () => {
       const res = await api.get("/posts/" + path) /* Yukarıka yakaladığım id'yi belirttiğim url içinde api'ye get isteği atıp res değişkeni içine attım.  */
@@ -50,9 +52,9 @@ export default function SinglePost() {
     <div className='singlePost'>
       <div className="singlePostWrapper">
         {post.photo && 
-          <img src={post.photo} className='singlePostImage' alt="" />
+          <img src={PF + post.photo} className='singlePostImage' alt="" />
         }
-        <div className='singlePostInfo'>
+        <div className='singlePostInfo'> 
           <div className="singlePostAuthDate" id='auth-date'>
             <span className='singlePostAuthor'>Yazar: 
             <Link to={`/?user=${post.userName}`} className="singlePostAuthorLink">

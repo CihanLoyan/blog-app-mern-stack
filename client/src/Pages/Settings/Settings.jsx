@@ -1,32 +1,70 @@
-import Sidebar from '../../components/SideBar/SideBar'
 import './Settings.css'
+import { useContext, useState } from 'react'
+import { Context } from '../../Context/Context'
+import api from '../../axiosCreate'
 import { data } from '../../data/data'
 
 export default function Settings() {
+  const [file, setFile] = useState(null)
+  const [userName, setUsername] = useState("")
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [success, setSuccess] = useState(false)
+  
+  const { user, dispatch } = useContext(Context)
+  const PF = 'http://localhost:5000/images/'
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    dispatch({type: "UPDATE_START"})
+    const updatedUser = {
+        userId: user._id,
+        userName,
+        email,
+        password,
+    };
+    if (file) {
+        const data = new FormData();
+        const filename = Date.now() + file.name;
+        data.append("name", filename);
+        data.append("file", file);
+        updatedUser.profilePic = filename;
+        try {
+          await api.post("/upload", data);
+        } catch (err) {}
+      }
+      try {
+        const res = await api.put("/users/" + user._id, updatedUser);
+        setSuccess(true)
+        dispatch({type: "UPDATE_SUCCESS", payload: res.data })
+      } catch (err) {
+        dispatch({type: "UPDATE_FAILURE"})
+      }
+}
+
   return (
     <div className='settings'>
       <div className="settingsWrapper">
-        <div className="settingsTitle">
-          <span className="settingsUpdateTitle">Hesabını Güncelle</span>
-          <span className="settingsDeleteTitle">Hesabını Sil</span>
-        </div>
-        <form action="" className="settingsForm">
+        <form className="settingsForm" onSubmit={handleSubmit}>
           <div className="settingsProfile">
             <div className="settingsProfilePicture">
-              <img src={data.images[2]} alt="" />
               <label htmlFor="fileInput"> {/* label'a tıklandığında aşağıda id'si fileInput olan input'u çalıştırır. */}
-                <i className="settingsProfilePictureIcon fa-solid fa-user"></i>
+                <img src={file ? URL.createObjectURL(file) : PF + user.profilePic} alt="" />
               </label>
             </div>
-            <input type="file" id='fileInput' style={{display: 'none'}}/> {/* label'a bağladığım için buton görünümünü gizledim. */}
+            <input type="file" id='fileInput' style={{display: 'none'}} onChange={e => setFile(e.target.files[0])} /> {/* label'a bağladığım için buton görünümünü gizledim. */}
           </div>
-          <input type="text" placeholder='Kullanıcı Adı' />
-          <input type="email" placeholder='Email' />
-          <input type="password" placeholder='***********' />
-          <button className="settingsButton">Güncelle</button>
+          <input type="text" placeholder={user.userName} onChange={e => setUsername(e.target.value)} />
+          <input type="email" placeholder={user.email} onChange={e => setEmail(e.target.value)} />
+          <input type="password" placeholder='***********' onChange={e => setPassword(e.target.value)} />
+          <button className="settingsButton" type='submit'>Güncelle</button>
+          {
+            success && (
+              <span style={{color: 'green', fontFamily: 'Varela Round', fontSize: '1rem'}}>Bilgileriniz güncellendi</span>
+            )
+          }
         </form>
       </div>
-      <Sidebar />
     </div>
   )
 }

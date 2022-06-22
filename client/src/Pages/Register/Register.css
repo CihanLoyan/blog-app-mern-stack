@@ -77,6 +77,16 @@
 
 @media (max-width: 821px) { 
     .register {
-        width: 40%; /* Genişliği sayfa genişliğinin yarısı kadar olsun. */
+        width: 35%; /* Genişliği sayfa genişliğinin yarısı kadar olsun. */
     }
  }
+
+@media (max-width: 415px) {
+    .register {
+        width: 50%;
+    }
+
+    .registerLoginLink .registerLoginButton {
+        font-size: 12px;
+    }
+}

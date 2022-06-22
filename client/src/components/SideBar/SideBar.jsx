@@ -35,16 +35,6 @@ export default function Sidebar() {
         </p>
       </div>
       <div className="sideBarItem">
-        <span className='sideBarTitle'>Kategoriler</span>
-        <ul className="sideBarList">
-          {cats.map(c => (
-            <Link to={`/?cat=${c.name}`} className="sideBarListLink" >
-              <li className="sideBarListItem">{c.name}</li>
-            </Link>
-          ))}
-        </ul>
-      </div>
-      <div className="sideBarItem">
         <span className="sideBarTitle">Beni Takip Et</span>
         <div className="sideBarSocial">
           <i className="sideBarIcon fa-brands fa-facebook"></i>

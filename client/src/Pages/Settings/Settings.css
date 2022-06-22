@@ -25,8 +25,9 @@
 .settingsForm {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 30%;
     margin: auto;
+    padding-top: 30px;
 }
 
 .settingsProfile {
@@ -41,7 +42,41 @@
     width: 200px;
     height: 200px;
     margin-bottom: 25px;
+    position: relative;
 }
+
+@media (max-width: 820px) {
+    .settingsProfilePicture i {
+        left: 83px;
+    }
+
+    .settingsForm {
+        width: 50%;
+    }
+}
+
+@media (max-width: 415px) {
+    .settingsProfilePicture i {
+        top: 55px;
+        left: 60px;
+    }
+
+    .settingsProfilePicture {
+        width: 150px;
+        height: 150px;
+    }
+
+    .settingsForm .settingsButton {
+        width: 150px;
+        height: 35px;
+        margin: 20px auto;
+        padding: 10px 20px;
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+} 
 
 .settingsProfilePicture img {
     width: 100%;
@@ -49,6 +84,11 @@
     object-fit: cover;
     border-radius: 50%;
     opacity: .5;
+    cursor: pointer;
+}
+
+.settingsProfilePicture img:hover {
+    opacity: .7;
 }
 
 .settingsProfilePictureIcon {

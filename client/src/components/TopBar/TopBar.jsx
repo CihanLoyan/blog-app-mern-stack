@@ -6,6 +6,8 @@ import { Context } from "../../Context/Context";
 export default function TopBar() {
     const { user, dispatch } = useContext(Context);
 
+    const PF = 'http://localhost:5000/images/'
+
     const handleLogout = () => {
         dispatch({type: "LOGOUT"});
     };
@@ -24,27 +26,25 @@ export default function TopBar() {
                         <Link to="/">AnaSayfa</Link>
                     </li>
                     <li className="topListItem">
-                        <Link to="/">Hakkımızda</Link>
-                    </li>
-                    <li className="topListItem">
-                        <Link to="/">İletişim</Link>
-                    </li>
-                    <li className="topListItem">
                         <Link to="/write">Yaz</Link>
-                    </li>
-                    <li className="logOut topListItem" onClick={handleLogout}>
-                        <Link to="/">{user && "Çıkış"}</Link>
                     </li>
                 </ul>
             </div>
             <div className="topRight">
                 {
                     user ? (
-                        <ul className='topRightList'>
-                            <li className='topRightListItem'>   
-                                <img className='topImg' src={user.profilePicture} alt="" />
+                        <>
+                            <Link to="/settings">
+                                <ul className='topRightList'>
+                                    <li className='topRightListItem'>   
+                                        <img className='topImg' src={PF + user.profilePic} alt="" />
+                                    </li>
+                                </ul>
+                            </Link>
+                            <li className="logOut topListItem" onClick={handleLogout}>
+                                <Link to="/">{user && "Çıkış"}</Link>
                             </li>
-                        </ul>
+                        </>
                     ) : (
                         <>
                             <Link className='link' to="/login">Giriş Yap</Link>
@@ -52,7 +52,6 @@ export default function TopBar() {
                         </>
                     )
                 }
-                <i className="topSearchIcon fas fa-search"></i>
             </div>
         </div>
     )
