@@ -2,11 +2,14 @@ import './SideBar.css'
 import { data } from '../../data/data'
 import { useState } from 'react'
 import { useEffect } from 'react'
-import { useLocation } from 'react-router'
-import { Link } from 'react-router-dom';
 import api from '../../axiosCreate'
+import { useContext } from "react";
+import { Context } from "../../Context/Context";
 
 export default function Sidebar() {
+  
+  const { user } = useContext(Context);
+  const PF = 'http://localhost:5000/images/'
 
   const [cats, setCats] = useState([]); /* Categories bir dizi olduğu için başlangıç değeri olarak dizi verdim. */
 
@@ -24,7 +27,7 @@ export default function Sidebar() {
         <span className="aboutMe sideBarTitle">Hakkımda</span>
         <img 
           className='sideBarTitleImg'
-          src={data.images[2]} 
+          src={PF + user.profilePic} 
           alt="" 
         />
         <p>
