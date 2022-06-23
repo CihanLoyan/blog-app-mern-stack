@@ -100,6 +100,7 @@
     line-height: 30px;
     word-spacing: .1rem;
     letter-spacing: 0.06rem;
+    word-break: break-all;
     font-family: 'Roboto Condensed', sans-serif;
 }
 

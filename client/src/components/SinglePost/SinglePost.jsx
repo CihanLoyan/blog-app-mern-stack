@@ -1,7 +1,6 @@
 import './SinglePost.css'
 import { useLocation } from 'react-router'
-import { useEffect } from 'react';
-import { useContext, useState } from 'react'
+import { useContext, useState, useEffect } from 'react'
 import { Context } from '../../Context/Context'
 import { Link } from 'react-router-dom';
 import api from '../../axiosCreate'
@@ -10,8 +9,8 @@ export default function SinglePost() {
   const location = useLocation();
   const path = location.pathname.split("/")[2]; /* id'yi aldım. */ 
 
-  const [post, setPost] = useState({})
   const { user } = useContext(Context)
+  const [post, setPost] = useState({})
   const [title, setTitle] = useState("")
   const [desc, setDesc] = useState("")
   const [updateMode, setUpdateMode] = useState(false)

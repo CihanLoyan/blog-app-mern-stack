@@ -15,6 +15,11 @@
 @media (max-width: 420px) {
     .post {
         margin: 10px 40px 40px 40px;    
+        width: 300px;
+    }
+    .post .postTitle {
+        font-size: 18px;
+        padding: 5px;
     }
 }
 
@@ -51,6 +56,8 @@
     margin-top: 10px;
     cursor: pointer;
     margin-bottom: 2px;
+    display: flex;
+    text-align: center;
 }
 
 .postDate {
@@ -67,6 +74,7 @@
     display: -webkit-box;  
     -webkit-box-orient: vertical; /* satırları dikey olarak sırala */
     -webkit-line-clamp: 3;  /* Görünecek kısmı 3 satırla sınırladım */
+    word-break: break-all;
 }
 
 .postLink {
